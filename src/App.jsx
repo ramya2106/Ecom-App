@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import {BrowserRouter, Routes,Route} from 'react-router-dom';
+import {HashRouter, Routes,Route} from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './pages/Home';
 import Cart from './pages/Cart'
@@ -13,7 +13,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar/>
       <div>
         <Routes>
@@ -22,7 +22,7 @@ function App() {
           <Route path="/admin" element={<Admin/>}/>
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
